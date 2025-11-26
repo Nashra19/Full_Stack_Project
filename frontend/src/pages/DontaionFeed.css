@@ -1,0 +1,117 @@
+/* General container for the entire donation feed */
+.donation-feed-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9; /* Light grey background to make cards pop */
+}
+
+.donation-feed-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #F57C00; /* Deep Orange for main title */
+  margin-bottom: 2rem;
+}
+
+/* Grid layout for the list of donations */
+.donations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual donation card styling */
+.donation-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.donation-image-wrap {
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  border: 1px solid #f0f0f0;
+}
+
+.donation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.donation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.donation-card h3 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #FF9800; /* Orange accent line */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.donation-card p {
+  margin: 0.5rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.donation-card p strong {
+  color: #333;
+}
+
+/* Status badge styling */
+.donation-card .status-Available,
+.donation-card .status-Claimed,
+.donation-card .status-Collected {
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.status-Available {
+  background-color: #4CAF50; /* Green */
+}
+
+.status-Claimed {
+  background-color: #2196F3; /* Blue */
+}
+
+.status-Collected {
+  background-color: #757575; /* Grey */
+}
+
+/* Claim button styling */
+.claim-btn {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #FF9800; /* Primary Orange */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.claim-btn:hover {
+  background-color: #F57C00; /* Darker Orange on hover */
+  transform: scale(1.02);
+}

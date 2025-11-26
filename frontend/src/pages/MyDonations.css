@@ -1,0 +1,111 @@
+.my-donations-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+.my-donations-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1e2a38;
+}
+
+.my-donations-empty {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+}
+
+.my-donations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.donation-card {
+  background: #fff;
+  padding: 1.2rem;
+  border: 1px solid #e1e5ee;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.donation-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.donation-card p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.donation-card strong {
+  color: #1e2a38;
+}
+
+.donation-items {
+  margin-top: 0.5rem;
+  margin-left: 1.2rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.donation-date {
+  margin-top: 0.8rem;
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+  font-style: italic;
+}
+
+/* Image inside the card */
+.donation-card img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Status badges */
+.status-Available,
+.status-Claimed,
+.status-Collected {
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.status-Available { background: #4CAF50; }
+.status-Claimed { background: #2196F3; }
+.status-Collected { background: #757575; }
+
+/* Actions */
+.actions-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+.btn {
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.btn.primary { background: #ff9800; color: #fff; }
+.btn.primary:hover { background: #e68900; }
+.btn.ghost { background: #f0f0f0; color: #333; }
+.btn.ghost:hover { background: #e4e4e4; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }

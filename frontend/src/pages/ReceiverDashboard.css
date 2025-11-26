@@ -1,0 +1,108 @@
+/* Styles for the Receiver (NGO) Dashboard */
+.receiver-dashboard {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7f6;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.greeting h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.greeting p {
+  margin: 0;
+  color: #666;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-actions .profile-btn,
+.profile-actions .logout-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-actions .profile-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.profile-actions .logout-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.profile-actions .logout-btn:hover {
+  background-color: #ee5a24;
+}
+
+.dashboard-content {
+  padding: 2rem;
+}
+
+/* Card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.dash-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.dash-card .icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.dash-card h3 {
+  margin: 0.25rem 0 0.5rem 0;
+  color: #333;
+}
+
+.dash-card p {
+  color: #666;
+  margin: 0 0 1rem 0;
+}
+
+.dash-card .btn-yellow {
+  background: #f7c948;
+  color: #1a1a1a;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.08s ease, box-shadow 0.2s ease;
+}
+
+.dash-card .btn-yellow:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(247, 201, 72, 0.4);
+}

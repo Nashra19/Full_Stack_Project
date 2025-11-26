@@ -1,0 +1,27 @@
+﻿# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# env
+.env
+frontend/.env
+backend/.env
+
+# build/artifacts
+frontend/build/
+frontend/dist/
+backend/build/
+dist/
+
+# OS / editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+
+# misc
+*.tgz

@@ -1,0 +1,125 @@
+/* Profile Page Wrapper */
+.profile-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 152, 0, 0.2); /* semi-transparent orange */
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* frosted glass */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 8px 25px rgba(255, 152, 0, 0.4);
+  text-align: left;
+  margin-top: 2rem;
+}
+
+
+.profile-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Form Layout */
+.profile-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.form-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+/* Inputs, Textarea, Select */
+input, textarea, select {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #fffefc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 5px rgba(255,152,0,0.5);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Avatar Section */
+.avatar-selection {
+  margin-top: 1.5rem;
+}
+
+.avatar-selection h2 {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.avatar-grid {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.avatar-option {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: 0.3s;
+  object-fit: cover;
+}
+
+.avatar-option:hover {
+  transform: scale(1.1);
+}
+
+.avatar-option.selected {
+  border: 3px solid #ff9800;
+  box-shadow: 0 0 12px rgba(255,152,0,0.7);
+}
+
+/* Save Button */
+.form-actions {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.save-btn {
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background: #ff9800;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #e68900;
+}

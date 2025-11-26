@@ -1,0 +1,359 @@
+/* Modern Register Styles */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.8) 0%, rgba(238, 90, 36, 0.8) 100%), 
+              url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.register-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.register-form {
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 50px 40px;
+  border-radius: 24px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  animation: slideUp 0.6s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.register-form h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2d3748;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 16px 20px;
+  margin: 12px 0;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.register-form input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+.register-form input::placeholder {
+  color: #a0aec0;
+  font-weight: 400;
+}
+
+.register-form button {
+  width: 100%;
+  padding: 16px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background: #ee5a24;
+}
+
+.register-form button:active {
+  transform: none;
+}
+
+.register-form p {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.register-form a {
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.register-form a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  transition: width 0.3s ease;
+}
+
+.register-form a:hover::after {
+  width: 100%;
+}
+
+.register-form a:hover {
+  color: #ee5a24;
+  transform: translateY(-1px);
+}
+
+.error {
+  color: #e53e3e;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  background: rgba(229, 62, 62, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid #e53e3e;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.success {
+  color: #38a169;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  background: rgba(56, 161, 105, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid #38a169;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success-message {
+  color: #38a169;
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 12px 16px;
+  background: rgba(56, 161, 105, 0.1);
+  border-radius: 12px;
+  border-left: 4px solid #38a169;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 16px 20px;
+  padding-right: 50px;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.password-wrapper input:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+.eye-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ff6b6b;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  background: rgba(255, 107, 107, 0.1);
+}
+
+.eye-icon:hover {
+  color: #ee5a24;
+  background: rgba(255, 107, 107, 0.2);
+  transform: scale(1.1);
+}
+
+/* Password strength indicator */
+.password-strength {
+  margin-top: 8px;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.password-strength.weak {
+  background: rgba(229, 62, 62, 0.1);
+  color: #e53e3e;
+  border-left: 3px solid #e53e3e;
+}
+
+.password-strength.medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border-left: 3px solid #f59e0b;
+}
+
+.password-strength.strong {
+  background: rgba(56, 161, 105, 0.1);
+  color: #38a169;
+  border-left: 3px solid #38a169;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .register-form {
+    padding: 40px 30px;
+    margin: 10px;
+  }
+  
+  .register-form h2 {
+    font-size: 28px;
+  }
+  
+  .register-form input,
+  .password-wrapper input {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+  
+  .register-form button {
+    padding: 14px;
+    font-size: 16px;
+  }
+}
+
+/* Loading state for button */
+.register-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Floating animation for background elements */
+.register-container::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+.register-container::before {
+  content: '';
+  position: absolute;
+  bottom: 20%;
+  right: 15%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite reverse;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Form field animations */
+.register-form input,
+.password-wrapper input {
+  animation: fadeInUp 0.6s ease-out;
+  animation-fill-mode: both;
+}
+
+.register-form input:nth-child(1) { animation-delay: 0.1s; }
+.register-form input:nth-child(2) { animation-delay: 0.2s; }
+.password-wrapper:nth-child(3) { animation-delay: 0.3s; }
+.password-wrapper:nth-child(4) { animation-delay: 0.4s; }
+.register-form button { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
