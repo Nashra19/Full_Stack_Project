@@ -12,6 +12,7 @@ import Dashboard from './pages/DonarDashboard';
 import ReceiverDashboard from './pages/ReceiverDashboard';
 import Donate from './pages/Donate';
 import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 import ProfileSetup from './pages/Profile';
 import MyDonations from './pages/MyDonations';
 import BrowseRequests from './pages/BrowseRequest';
@@ -82,6 +83,7 @@ function AppRoutes() {
       <Route path="/register" element={<Register />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/howitworks" element={<HowItWorks />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
 
       {/* Role-based Dashboard Routes */}
       <Route path="/dashboard" element={<DonorRoute><Dashboard /></DonorRoute>} />
